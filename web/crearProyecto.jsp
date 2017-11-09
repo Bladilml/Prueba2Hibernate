@@ -33,7 +33,7 @@
                 //    document.getElementById()
                 //}
                 xhttp = new XMLHttpRequest();
-                xhttp.open("GET", "getComunaServlet.do?q=" + str, true);
+                xhttp.open("GET", "getComuna.do?q=" + str, true);
                 xhttp.onreadystatechange = function () {
                     if (this.readyState == 4 && this.status == 200) {
                         document.getElementById("comuna").innerHTML = this.responseText;
@@ -103,7 +103,7 @@
                         <td>
                             <select name="Estado">
                                 <option value="Aprobado" selected="">Aprobado</option>
-                                <option value="Encurso">Encurso</option>
+                                <option value="Encurso">En curso</option>
                                 <option value="Finalizado">Finalizado</option>
                             </select>
                         </td>

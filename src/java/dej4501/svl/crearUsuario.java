@@ -55,7 +55,7 @@ public class crearUsuario extends HttpServlet {
                 Usuarios newUser = new Usuarios (username, encryptedPass, "user");
                 boolean resultado = userService.crearUsuario(newUser);
                 if (!resultado) {
-                    listaMensajes.add("Usuario no pudo ser aghregado con éxito");
+                    listaMensajes.add("Usuario no pudo ser agregado con éxito");
                 }
                 else{
                     url="login.jsp";
@@ -65,7 +65,7 @@ public class crearUsuario extends HttpServlet {
                 listaMensajes.add("Contraseñas deben ser iguales");
             }
         }else{
-            listaMensajes.add("Nombre de usuario incorrecto!");
+            listaMensajes.add("Nombre de usuario incorrecto");
         }
         request.setAttribute("listaMensajes",listaMensajes);
         request.getRequestDispatcher(url).forward(request, response);
